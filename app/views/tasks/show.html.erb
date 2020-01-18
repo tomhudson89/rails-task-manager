@@ -1,0 +1,12 @@
+
+  <h1><%= @task.title %></h1>
+  <span><%= @task.details %></span><br>
+  <% if @task.completed != true %>
+  <span>[ ] Mark when done</span>
+  <% else %>
+  <span>[X]</span>
+  <% end %>
+
+<p>  <%= link_to "Back to all Tasks", tasks_path %> </p>
+
+<p><%= link_to "Update task", edit_path(@task) %></p>
