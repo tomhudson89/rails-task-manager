@@ -1,7 +1,104 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-  font: sans-serif;
-  background-color: gray;
+
+body {
+  font-family: arial;
+  margin: 10px;
+
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+}
+
+.card-product img {
+  height: 100%;
+  width: 40px;
+  padding: 16px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-family: arial;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-family: arial;
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-product .card-product-delete {
+  padding: 16px;
+}
+
+.btn-ghost {
+  font-family: arial;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+.btn-flat {
+  font-family: arial;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.buttons {
+  margin-top: 24px;
+
+}
+
+.btn-ghost2 {
+  font-family: arial;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  align: right;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+}
+
+.btn-ghost2:hover {
+  opacity: 1;
 }

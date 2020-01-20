@@ -1,17 +1,4 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
 
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-
-
-
-  <%= f.submit %>
-<% end %>
 
 
 <!-- <form action="/tasks" method="post">
@@ -24,3 +11,21 @@
   <input type="update">
 
 </form> -->
+
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <br>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <br>
+  <%= f.submit %>
+    <% end %>
+  </div>
+</div>

@@ -1,12 +1,17 @@
-
-  <h1><%= @task.title %></h1>
-  <span><%= @task.details %></span><br>
+<div class="card-product">
   <% if @task.completed != true %>
-  <span>[ ] Mark when done</span>
+  <span><img src="https://image.flaticon.com/icons/svg/2089/2089628.svg" /></span>
   <% else %>
-  <span>[X]</span>
+  <span><img src="https://image.flaticon.com/icons/svg/2089/2089632.svg" /></span>
   <% end %>
+  <div class="card-product-infos">
+    <h2><%= @task.title %></h2>
+    <p><%= @task.details %></p>
+  </div>
+</div>
 
-<p>  <%= link_to "Back to all Tasks", tasks_path %> </p>
 
-<p><%= link_to "Update task", edit_path(@task) %></p>
+<div class= "buttons">
+  <span><%= link_to "Back to all Tasks", tasks_path, class: "btn btn-ghost" %></span>
+  <span><%= link_to "Update task", edit_path(@task), class: "btn btn-flat" %></span>
+</div>

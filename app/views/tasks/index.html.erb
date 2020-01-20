@@ -1,17 +1,22 @@
 
-<h2>Tasks</h2>
-<% @tasks.each do |task| %>
-  <% if task.completed != true %>
-  <span>[ ]</span>
-  <% else %>
-  <span>[X]</span>
+<h1>Tasks</h1>
+
+  <% @tasks.each do |task| %>
+    <div class="card-product">
+      <% if task.completed != true %>
+      <span><img src="https://image.flaticon.com/icons/svg/2089/2089628.svg" /></span>
+      <% else %>
+      <span><img src="https://image.flaticon.com/icons/svg/2089/2089632.svg" /></span>
+      <% end %>
+    <div class="card-product-infos">
+      <span><h2><%= link_to task.title, task_path(task) %></h2></span>
+    </div>
+    <div class="card-product-delete">
+      <span><%= link_to "Delete task", delete_path(task), method: :delete, class: "btn btn-ghost2" %></span>
+    </div>
+    </div>
   <% end %>
-  <span><%= link_to task.title, task_path(task) %></span><br>
-  <p><%= link_to "Delete task", delete_path(task), method: :delete %></p>
 
-<% end %>
-
-<p><%= link_to "Create new task", new_path %></p>
-
-
-
+<div class= "buttons">
+<%= link_to "Create new task", new_path, class: "btn btn-flat" %>
+</div>
